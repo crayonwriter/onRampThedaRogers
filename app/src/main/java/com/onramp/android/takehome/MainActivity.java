@@ -11,10 +11,13 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 private RecyclerView recyclerView;
 private RecyclerView.Adapter mAdapter;
 private RecyclerView.LayoutManager layoutManager;
+ArrayList<Categories> mCategories;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +27,7 @@ private RecyclerView.LayoutManager layoutManager;
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter= new RecyclerViewCategoriesAdapter(categories);
+        mAdapter= new RecyclerViewCategoriesAdapter(Categories);
         recyclerView.setAdapter(mAdapter);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
