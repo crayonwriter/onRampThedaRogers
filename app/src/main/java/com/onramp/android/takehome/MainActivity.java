@@ -1,5 +1,6 @@
 package com.onramp.android.takehome;
 
+import android.graphics.Movie;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,14 +11,15 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ListView;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 private RecyclerView recyclerView;
-private RecyclerView.Adapter mAdapter;
+private RecyclerViewCategoriesAdapter mAdapter;
 private RecyclerView.LayoutManager layoutManager;
-ArrayList<Categories> mCategories;
+ArrayList<Categories> categoriesList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,8 +29,14 @@ ArrayList<Categories> mCategories;
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter= new RecyclerViewCategoriesAdapter(Categories);
+        mAdapter= new RecyclerViewCategoriesAdapter();
         recyclerView.setAdapter(mAdapter);
+
+
+        ArrayList<Categories> categoriesList = new ArrayList<>();
+        categoriesList.add(new Categories(R.drawable.grindylow, "www.crayonwriter.com" , "Doctors"));
+
+
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
