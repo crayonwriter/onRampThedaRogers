@@ -29,7 +29,7 @@ ArrayList<Categories> categoriesList;
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter= new RecyclerViewCategoriesAdapter();
+        mAdapter = new RecyclerViewCategoriesAdapter(this, categoriesList);
         recyclerView.setAdapter(mAdapter);
 
 
