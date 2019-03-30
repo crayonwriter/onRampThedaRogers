@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 private RecyclerView recyclerView;
 private RecyclerViewCategoriesAdapter mAdapter;
 private RecyclerView.LayoutManager layoutManager;
-ArrayList<Categories> categoriesList;
+ArrayList<Categories> categoriesArrayList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,12 +29,12 @@ ArrayList<Categories> categoriesList;
         recyclerView = (RecyclerView) findViewById(R.id.recycler_view);
         layoutManager = new GridLayoutManager(this, 2);
         recyclerView.setLayoutManager(layoutManager);
-        mAdapter = new RecyclerViewCategoriesAdapter(this, categoriesList);
+        mAdapter = new RecyclerViewCategoriesAdapter(this, categoriesArrayList);
         recyclerView.setAdapter(mAdapter);
 
 
-        ArrayList<Categories> categoriesList = new ArrayList<>();
-        categoriesList.add(new Categories(R.drawable.grindylow, "www.crayonwriter.com" , "Doctors"));
+//        ArrayList<Categories> categoriesList = new ArrayList<>();
+//        categoriesList.add(new Categories(R.drawable.grindylow, "www.crayonwriter.com" , "Doctors"));
 
 
 
