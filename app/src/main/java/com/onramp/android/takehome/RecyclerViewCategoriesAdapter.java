@@ -6,10 +6,10 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-
+import android.support.v7.widget.RecyclerView.ViewHolder;
 import java.util.ArrayList;
 
-public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter {
+public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<RecyclerViewCategoriesAdapter.ViewHolder> {
     public RecyclerViewCategoriesAdapter(Context context, ArrayList<Categories> categoriesList) {
         this.categoriesList = categoriesList;
         this.context = context;
@@ -18,17 +18,14 @@ public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter {
     private ArrayList<Categories> categoriesList;
     private Context context;
 
-    @NonNull
-    @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
-        View layoutView = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.categories_item, null);
 
-        )
+    @Override
+    public RecyclerViewCategoriesAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull RecyclerView.ViewHolder viewHolder, int i) {
+    public void onBindViewHolder(RecyclerViewCategoriesAdapter.ViewHolder holder, int position) {
 
     }
 
