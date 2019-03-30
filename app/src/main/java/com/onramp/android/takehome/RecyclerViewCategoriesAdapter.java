@@ -9,7 +9,7 @@ import android.view.ViewGroup;
 import android.support.v7.widget.RecyclerView.ViewHolder;
 import java.util.ArrayList;
 
-public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<RecyclerViewCategoriesAdapter.ViewHolder> {
+public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder> {
     public RecyclerViewCategoriesAdapter(Context context, ArrayList<Categories> categoriesList) {
         this.categoriesList = categoriesList;
         this.context = context;
@@ -20,17 +20,24 @@ public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<Recycler
 
 
     @Override
-    public RecyclerViewCategoriesAdapter.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         return null;
     }
 
     @Override
-    public void onBindViewHolder(RecyclerViewCategoriesAdapter.ViewHolder holder, int position) {
+    public void onBindViewHolder(RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder holder, int position) {
 
     }
 
     @Override
     public int getItemCount() {
         return 0;
+    }
+
+    static class RecyclerViewCategoriesViewHolder extends RecyclerView.ViewHolder {
+
+        public RecyclerViewCategoriesViewHolder(View itemView) {
+            super(itemView);
+        }
     }
 }
