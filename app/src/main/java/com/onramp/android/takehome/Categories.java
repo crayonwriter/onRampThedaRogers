@@ -1,5 +1,7 @@
 package com.onramp.android.takehome;
 
+import android.media.Image;
+
 import java.util.ArrayList;
 
 public class Categories {
@@ -7,7 +9,7 @@ public class Categories {
 //These are the details of the Categories object: An image, a web address, a fragment?, and the name of the category
 
     //The id of the image
-    private int mCategoryImage;
+    private Image mCategoryImage;
 
     //The website or fragment that will open when clicked on, when it becomes clickable
     private String mCategoryClickedLocation;
@@ -16,18 +18,18 @@ public class Categories {
     private String mCategoryName;
 
     //Constructor
-    public Categories(int categoryImage, String categoryClickedLocation, String categoryName) {
+    public Categories(Image categoryImage, String categoryClickedLocation, String categoryName) {
         mCategoryImage = categoryImage;
         mCategoryClickedLocation = categoryClickedLocation;
         mCategoryName = categoryName;
     }
 
     //Getters and Setters
-    public int getCategoryImage() {
+    public Image getCategoryImage() {
         return mCategoryImage;
     }
 
-    public void setCategoryImage(int categoryImage) {
+    public void setCategoryImage(Image categoryImage) {
         mCategoryImage = categoryImage;
     }
 

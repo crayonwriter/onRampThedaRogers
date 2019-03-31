@@ -1,6 +1,7 @@
 package com.onramp.android.takehome;
 
 import android.content.Context;
+import android.media.Image;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -10,27 +11,28 @@ import android.support.v7.widget.RecyclerView.ViewHolder;
 import java.util.ArrayList;
 
 public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder> {
-    public RecyclerViewCategoriesAdapter(Context context, ArrayList<Categories> categoriesArrayList) {
-        this.categoriesArrayList = categoriesArrayList;
-        this.context = context;
+    ArrayList<Categories> mCategoriesArrayList;
+    Context mContext;
+
+    //Constructor
+    public RecyclerViewCategoriesAdapter(Context context, ArrayList<Categories> arrayList) {
+        mCategoriesArrayList = arrayList;
+        mContext = context;
     }
-
-    private ArrayList<Categories> categoriesArrayList;
-    private Context context;
-
 
     @Override
     public RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.categories_item, parent, false);
         RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder viewHolder = new RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder(layoutView);
-        return viewHolder;
+        return new RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder(layoutView);
     }
 
     @Override
     public void onBindViewHolder(RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder holder, int position) {
-        holder.categoryImage.setImageResource
-                holder.categoryText.setText
-                        holder.CategoryWebAddress.setText
+        Categories object = mCategoriesArrayList.get(position);
+
+        Image image = object.getCategoryImage();
+
     }
 
     @Override
