@@ -10,23 +10,27 @@ import android.support.v7.widget.RecyclerView.ViewHolder;
 import java.util.ArrayList;
 
 public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder> {
-    public RecyclerViewCategoriesAdapter(Context context, ArrayList<Categories> categoriesList) {
-        this.categoriesList = categoriesList;
+    public RecyclerViewCategoriesAdapter(Context context, ArrayList<Categories> categoriesArrayList) {
+        this.categoriesArrayList = categoriesArrayList;
         this.context = context;
     }
 
-    private ArrayList<Categories> categoriesList;
+    private ArrayList<Categories> categoriesArrayList;
     private Context context;
 
 
     @Override
     public RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        return null;
+        View layoutView = LayoutInflater.from(parent.getContext()).inflate(R.layout.categories_item, parent, false);
+        RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder viewHolder = new RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder(layoutView);
+        return viewHolder;
     }
 
     @Override
     public void onBindViewHolder(RecyclerViewCategoriesAdapter.RecyclerViewCategoriesViewHolder holder, int position) {
-
+        holder.categoryImage.setImageResource
+                holder.categoryText.setText
+                        holder.CategoryWebAddress.setText
     }
 
     @Override

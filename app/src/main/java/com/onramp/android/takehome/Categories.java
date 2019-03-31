@@ -3,6 +3,7 @@ package com.onramp.android.takehome;
 import java.util.ArrayList;
 
 public class Categories {
+
 //These are the details of the Categories object: An image, a web address, a fragment?, and the name of the category
 
     //The id of the image
@@ -16,6 +17,9 @@ public class Categories {
 
     //Constructor
     public Categories(int categoryImage, String categoryClickedLocation, String categoryName) {
+        mCategoryImage = categoryImage;
+        mCategoryClickedLocation = categoryClickedLocation;
+        mCategoryName = categoryName;
     }
 
     //Getters and Setters
