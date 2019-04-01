@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 private RecyclerView recyclerView;
-private RecyclerViewCategoriesAdapter mAdapter;
+private RecyclerView.Adapter mAdapter;
 private RecyclerView.LayoutManager layoutManager;
 ArrayList<Categories> categoriesArrayList;
 
@@ -33,8 +33,6 @@ ArrayList<Categories> categoriesArrayList;
         recyclerView.setAdapter(mAdapter);
 
 
-//        ArrayList<Categories> categoriesList = new ArrayList<>();
-//        categoriesList.add(new Categories(R.drawable.grindylow, "www.crayonwriter.com" , "Doctors"));
 
 
 

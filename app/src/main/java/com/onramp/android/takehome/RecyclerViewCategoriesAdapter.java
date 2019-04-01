@@ -42,7 +42,7 @@ public class RecyclerViewCategoriesAdapter extends RecyclerView.Adapter<Recycler
 
         Categories object = mCategoriesArrayList.get(position);
 
-        Image image = object.getCategoryImage();
+        int image = object.getCategoryImage();
         String webAddress = object.getCategoryClickedLocation();
         String name = object.getCategoryName();
 
